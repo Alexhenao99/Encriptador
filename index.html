@@ -2,14 +2,21 @@
 <html lang="es" >
     <head>
         <meta charset = "UTF-8" >
+        <meta name="viewport" content="width=device-width">
         <title> Encriptador de Texto </title>
+        <link rel="icon" type="image/png" href="./images/encriptado.png">
         <link rel="stylesheet" href="./Css/reset.css">
         <link rel="stylesheet" href="./Css/index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nerko+One&display=swap" rel="stylesheet">
     </head>
     <body>
         <main>
             <div class = "home">
-                <img id="logo" src="./images/encriptado.png" alt="Logo">
+                <div id="logo">
+                    <a  href="./index.html"> <img id="logoI" src="./images/encriptado (1).png" alt="Logo"></a>
+                </div>
                 
                 <textarea 
                     name="input-text" 
@@ -20,28 +27,29 @@
                 ></textarea>
                 
                 <div class="divButtons">
-                    <p> 🛈 Solo letras minúsculas y sin acentos. </p>
+                    <p id="info" > 🛈 Solo letras minúsculas y sin acentos. </p>
                     <section class="buttons" >
-                        <button class="button" > Encriptar </button>
-                        <button class="button" > Desencriptar </button>
+                        <button id="btnEncriptar" class="button" > Encriptar </button>
+                        <button id="btnDesencriptar" class="button" > Desencriptar </button>
                     </section>
                 </div>
             </div >
             
-            <div class="result">
-                <div class="resultDefecto" >
-                    <img src="./images/Muñeco.png" alt="Buscando el mensaje">
-                    <h1> Ningún mensaje fue encontrado </h1>
-                    <p> Ingresa el texto que desees encriptar o desencriptar. </p>
+            <div id="result">
+                <div id="resultDefecto" >
+                    <img id = "image" src="./images/Muñeco.png" alt="Buscando el mensaje">
+                    <h1 id = "messege1" > Ningún mensaje fue encontrado </h1>
+                    <p id = "messege2" > Ingresa el texto que desees encriptar o desencriptar. </p>
                 </div>
-                <div class="resultRta">
-                    hola
+                <div id = "resultRta">
+                    <textarea id = "messegeRta" readonly ></textarea>
+                    <!-- <button id = "btn-copiar" > Copiar </button> -->
+                    <input type="submit" value="Copiar" id="btn-copiar">
                 </div>
             </div>
         </main>
         
         <footer>
-            <!-- <label for = "listCredits"> Imágenes e Íconos: </label> -->
             <ul class = "listCredits" >
                 <p class = "credits" > Imágenes e Íconos: </p>
                 <li class = "creditsLink" > <a href="https://www.freepik.es"> Freepik </a> </li>
@@ -49,7 +57,7 @@
                 <li class = "creditsLink" > <a href="https://www.flaticon.es/autores/iconsbox"> Flaticon </a> </li>
             </ul>
             
-            <p class = "copyrigth"> &copy;  William Henao - 2022 </p>
+            <p class = "copyrigth"> &copy; Copyright William Henao - 2022 </p>
             
             <div class="icons-webs">
                 <a href="https://github.com/Alexhenao99"> 
@@ -68,6 +76,7 @@
                 </a> 
             </div>
         </footer> 
+        <script src="./JS/index.js" ></script>
     </body>
     
 </html>

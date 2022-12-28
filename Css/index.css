@@ -1,7 +1,16 @@
 
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(#888888, #fefefe);
+}
+
 main{
     display: grid;
-    height: 95vh;
+    height: 93.5vh;
     grid-template-columns: 60% 40%;
 }
 
@@ -11,10 +20,13 @@ main{
 }
 
 #logo{
+    display: flex;
+    justify-content: center;
+}
+
+#logoI{
     width: 80px;
-    border-width: 1px;
-    border-style: dashed;
-    border-color: red rgba(170, 50, 220, .6) green;;
+    border: 3px double #395b64;
     border-radius: 10px;
     padding: 10px;
     margin: 20px;
@@ -22,29 +34,51 @@ main{
 
 .home textarea{
     padding: 40px;
-    margin: 60px 120px;
+    margin: 60px 30px 10px 120px;
     resize: none;
     background: none;
     border: none;
+    border-radius: 30px 10px;
     font-size: xx-large;
     outline: none;
 }
 
 .home textarea::placeholder{
-    color: black;
+    color: #282A3A;
+}
+
+button{
+    -webkit-text-stroke: 1px #282A3A;
+    font-size: 40px;
+    border-radius: 20px 10px;
+    border: 3px double gray;
+    cursor: pointer;
+    color: transparent;
+    background-color: transparent;
+}
+button:hover{
+    color: transparent;
+    box-shadow: 0px 24px 32px 18px rgba(0, 0, 0, 0.3);
+    transition: 1s;
+    transform:scale(1.1)
+}
+button:active{
+    transition: 0s;
+    color: #22A39F;
+    border-color: #22A39F;
+    box-shadow: 0px 24px 32px 18px #22a39f25;
 }
 
 .divButtons{
     display: grid;
     align-content: center;
     justify-content: center;
-
 }
 
 .divButtons p{
     padding: 10px 0; 
-    margin: 5px 0;
-    color: rgb(149, 149, 149);
+    margin: 5px 30px;
+    color: #2C3333;
 }
 
 .buttons{
@@ -53,64 +87,94 @@ main{
     align-items: flex-start;
     gap: 24px;
     padding: 0;
+    margin-left: 10px;
 }
 
 .button{
     width: 340px;
     height: 67px;
-    border-radius: 20px 10px;
-    border: 1px solid gray;
-    cursor: pointer;
-}
-.button:hover{
-    background-color: aqua;
-    color: blue;
-    box-shadow: 0px 24px 32px 18px rgba(0, 0, 0, 0.1);
-    transition: 1s;
-    transform:scale(1.1)
 }
 
-.result{
-    position: relative;
-}
-
-.resultDefecto{
+#result{
     display: grid;
-    align-content: center;
-    justify-content: center;
-    height: 80%;
-    background: #FFFFFF;
+    background: linear-gradient(#fefefe, #888888);
     box-shadow: 0px 24px 32px 18px rgba(0, 0, 0, 0.1);
     border-radius: 32px;
     margin: 40px;
-    padding: 50px;
+    padding: 10px;
+    color: #282A3A;
 }
 
-.resultDefecto img{
+#resultDefecto{
+    padding: 20px;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+#image{
     width: 100%;
 }
 
-h1{
+#messege1{
     display: grid;
     justify-content: center;
     text-align: center;
     font-weight: bold;
-    font-size: xx-large;
-    padding: 10px;
-    margin: 10px;
+    font-size: 40px;
+    padding: 10px auto;
+    margin: 20px auto;
+    
 }
 
-.resultDefecto p {
+#messege2 {
     display: grid;
     justify-content: center;
     text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
 }
 
-.resultRta{
+#resultRta{
     display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    grid-template-rows: 90% 10%;
+    padding: 10px;
+}
+
+#messegeRta{
+    resize: none;
+    background: none;
+    border: none;
+    font-size: xx-large;
+    outline: none;
+    padding: 0 15px;
+}
+
+#btn-copiar{
+    margin: 10px;
+    margin-bottom: 0;
+    padding: 5px;
+    -webkit-text-stroke: 1px #282A3A;
+    font-size: 40px;
+    border-radius: 32px;
+    border: 3px double gray;
+    cursor: pointer;
+    color: transparent;
+    background-color: transparent;
+    width: 100%;
+
+}
+#btn-copiar:hover{
+    transform: scale(1.1);
+    color: transparent;
+    box-shadow: 0px 24px 32px 18px rgba(0, 0, 0, 0.3);
+    transition: 1s;
+}
+#btn-copiar:active{
+    transition: 0s;
+    color: #22A39F;
+    border-color: #22A39F;
+    box-shadow: 0px 24px 32px 18px #22a39f25;
 }
 
 footer{
@@ -118,14 +182,16 @@ footer{
     grid-template-columns: 1fr 1fr 1fr;
     padding: 5px;
 }
+
 ul{
     display: flex;
     flex-direction: row;
     align-items: center;
 }
+
 li a{
     text-decoration: none;
-    color: blueviolet;
+    color: #22A39F;
 }
 
 .listCredits{
@@ -153,10 +219,116 @@ li a{
 }
 
 .contactMe{
-    width: 40px;
+    width: 50px;
     margin: 0 5px;
 }
 .contactMe:hover{
     transition: 1s;
     transform: scale(1.2);
+}
+
+@media screen and (max-width: 1130px) {
+    main{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .home textarea{
+        margin: 30px;
+    }
+    
+    #image{
+        display: none;
+    }
+    
+    #result{
+        margin: 40px 15px;
+    }
+
+    #resultRta{
+        
+        display: none;
+        /* flex-direction: column;
+        align-items: center; */
+        grid-template-rows: auto;
+        padding: 10px;
+        width: 100%;
+    }
+    
+    #messegeRta{
+        width: 95%;
+        height: 220px;
+    }
+    #btn-copiar{
+        width: 90%;
+        height: 80px;
+    }
+    #btn-copiar:hover{
+        transform: scale(1.05);
+    }
+
+    .divButtons{
+        display: flex;
+        flex-direction: column;
+        margin: 15px;
+    }
+    .buttons{
+        margin: 10px;
+    }
+    
+    .button{
+        width: 100%;
+        height: 80px;
+    }
+    
+    footer{
+        display: flex;
+        flex-direction: column;
+    } 
+    
+    .listCredits, .copyrigth, .icons-webs{
+        justify-content: center;
+        margin: 5px;
+        
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .home{
+        display: flex;
+        flex-direction: column;
+    }
+    .home textarea{
+        margin: 20px;
+        font-size: 32px;
+        padding: 10px;
+
+    }
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        margin: 15px;
+    }
+    .button, #btn-copiar{
+        font-size: 30px;
+    }
+
+    #result{
+        padding: 10px;
+        margin: 20px;
+    }
+
+    #messege1, #messege2{
+        font-size: 32px;
+    }
+
+    .credits, .creditsLink, .copyrigth{
+        font-size: 15px;
+    }
 }
