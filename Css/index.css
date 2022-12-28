@@ -1,0 +1,162 @@
+
+main{
+    display: grid;
+    height: 95vh;
+    grid-template-columns: 60% 40%;
+}
+
+.home{
+    display: grid;
+    grid-template-rows: 10% 70% 20%;
+}
+
+#logo{
+    width: 80px;
+    border-width: 1px;
+    border-style: dashed;
+    border-color: red rgba(170, 50, 220, .6) green;;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px;
+}
+
+.home textarea{
+    padding: 40px;
+    margin: 60px 120px;
+    resize: none;
+    background: none;
+    border: none;
+    font-size: xx-large;
+    outline: none;
+}
+
+.home textarea::placeholder{
+    color: black;
+}
+
+.divButtons{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+
+}
+
+.divButtons p{
+    padding: 10px 0; 
+    margin: 5px 0;
+    color: rgb(149, 149, 149);
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 0;
+}
+
+.button{
+    width: 340px;
+    height: 67px;
+    border-radius: 20px 10px;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: aqua;
+    color: blue;
+    box-shadow: 0px 24px 32px 18px rgba(0, 0, 0, 0.1);
+    transition: 1s;
+    transform:scale(1.1)
+}
+
+.result{
+    position: relative;
+}
+
+.resultDefecto{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    height: 80%;
+    background: #FFFFFF;
+    box-shadow: 0px 24px 32px 18px rgba(0, 0, 0, 0.1);
+    border-radius: 32px;
+    margin: 40px;
+    padding: 50px;
+}
+
+.resultDefecto img{
+    width: 100%;
+}
+
+h1{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: xx-large;
+    padding: 10px;
+    margin: 10px;
+}
+
+.resultDefecto p {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+
+.resultRta{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 5px;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+li a{
+    text-decoration: none;
+    color: blueviolet;
+}
+
+.listCredits{
+    padding-left: 20px;
+}
+
+.credits, .creditsLink{
+    margin: 5px;
+    font-size: 20px;
+}
+
+.copyrigth{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+
+.icons-webs{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.contactMe{
+    width: 40px;
+    margin: 0 5px;
+}
+.contactMe:hover{
+    transition: 1s;
+    transform: scale(1.2);
+}
